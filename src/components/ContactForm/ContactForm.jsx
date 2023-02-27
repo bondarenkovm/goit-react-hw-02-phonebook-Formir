@@ -36,8 +36,8 @@ const ContactForm = ({ formSubmit }) => {
       onSubmit={(values, { resetForm }) => {
         // console.log(values);
         formSubmit({
+          id: nanoid(5),
           ...values,
-          id: nanoid(),
         });
         resetForm();
       }}
