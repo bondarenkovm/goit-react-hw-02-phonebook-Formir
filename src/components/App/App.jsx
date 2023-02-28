@@ -4,6 +4,7 @@ import { Container } from './App.styled';
 import { ContactForm } from 'components/ContactForm';
 import { Filter } from 'components/Filter';
 import { ContactList } from 'components/ContactList';
+import { testContacts } from 'data';
 
 class App extends Component {
   state = {
@@ -13,12 +14,12 @@ class App extends Component {
 
   componentDidMount() {
     const contact = JSON.parse(localStorage.getItem('contacts'));
-    // console.log(contact);
     if (contact !== null) {
       this.setState({ contacts: contact });
     } else {
       this.setState({
-        contacts: [],
+        // contacts: [],
+        contacts: testContacts,
       });
     }
   }
